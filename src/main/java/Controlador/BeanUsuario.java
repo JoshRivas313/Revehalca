@@ -13,8 +13,7 @@ public class BeanUsuario implements Serializable{
     private static final long serialVersionUID = 1L;
     
     
-    private List<Usuario> lstUsuario ;
-    
+   
     
             
     public BeanUsuario() {
