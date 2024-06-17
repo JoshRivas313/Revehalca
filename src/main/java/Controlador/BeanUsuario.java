@@ -16,10 +16,7 @@ public class BeanUsuario implements Serializable{
    
     
             
-    public BeanUsuario() {
-       lstUsuario = new ArrayList<>();
-
-    }
+    
 
     
 
