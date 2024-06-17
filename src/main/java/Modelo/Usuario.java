@@ -4,19 +4,21 @@ package Modelo;
 
 public class Usuario {
     private int idUsuario;
-    private String password, nombreUsuario;
     private TipoUsuario tipoUsuario;
+    private String password, nombreUsuario;
+  
 
     public Usuario() {
     }
 
-    
-    public Usuario(int idUsuario, String password, String nombreUsuario, TipoUsuario tipoUsuario) {
+
+    public Usuario(int idUsuario, TipoUsuario tipoUsuario, String password, String nombreUsuario) {
         this.idUsuario = idUsuario;
+        this.tipoUsuario = tipoUsuario;
         this.password = password;
         this.nombreUsuario = nombreUsuario;
-        this.tipoUsuario = tipoUsuario;
     }
+
 
     public int getIdUsuario() {
         return idUsuario;
