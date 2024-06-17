@@ -9,19 +9,27 @@ public class Pedido {
     private Usuario usuario;
     private Mesa mesa;
     private EstadoPedido estadoPedido;
-
+    private List<Producto> producto = new ArrayList<>();
 
     public Pedido() {
     }
 
-    public Pedido(int idPedido, Cliente cliente, Usuario usuario, Mesa mesa, EstadoPedido estadoPedido) {
+    public Pedido(int idPedido, Cliente cliente, Usuario usuario, Mesa mesa, EstadoPedido estadoPedido,
+            List<Producto> producto) {
         this.idPedido = idPedido;
         this.cliente = cliente;
         this.usuario = usuario;
         this.mesa = mesa;
         this.estadoPedido = estadoPedido;
+        this.producto = producto;
     }
 
+
+    public int  CantidadProducto(){
+        return this.producto.size();
+    }
+   
+   
     public int getIdPedido() {
         return idPedido;
     }
@@ -72,6 +80,20 @@ public class Pedido {
     LocalTime hora = LocalTime.now();
     return hora;
 }
+
+
+
+
+    public List<Producto> getProducto() {
+        return producto;
+    }
+
+
+
+
+    public void setProducto(List<Producto> producto) {
+        this.producto = producto;
+    }
 
 
 

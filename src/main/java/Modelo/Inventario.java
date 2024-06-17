@@ -1,8 +1,12 @@
 package Modelo;
 
+import java.util.*;
+
 public class Inventario {
     private int idInventario;
-    private Producto producto;
+
+    private List<Producto> producto;
+
     private int cantidadDisponible;
     
 
@@ -10,7 +14,7 @@ public class Inventario {
     }
 
    
-    public Inventario(int idInventario, Producto producto, int cantidadDisponible) {
+    public Inventario(int idInventario, List<Producto> producto, int cantidadDisponible) {
         this.idInventario = idInventario;
         this.producto = producto;
         this.cantidadDisponible = cantidadDisponible;
@@ -27,13 +31,8 @@ public class Inventario {
     }
 
 
-    public Producto getProducto() {
+    public List<Producto> getProducto() {
         return producto;
-    }
-
-
-    public void setProducto(Producto producto) {
-        this.producto = producto;
     }
 
 
@@ -44,6 +43,11 @@ public class Inventario {
 
     public void setCantidadDisponible(int cantidadDisponible) {
         this.cantidadDisponible = cantidadDisponible;
+    }
+
+
+    public void setProducto(List<Producto> producto) {
+        this.producto = producto;
     }
 
 

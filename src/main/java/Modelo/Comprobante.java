@@ -1,6 +1,6 @@
 package Modelo;
 
-import java.time.LocalTime;
+import java.time.*;
 import java.util.*;
 
 public class Comprobante {
@@ -19,11 +19,15 @@ public class Comprobante {
         this.metodoPago = metodoPago;
     }
 
+    public double PrecioTotal(){
+        double precio = 0;
+        for (Producto producto : pedido.getProducto()) {
+            precio += producto.getPrecioProducto();
+        }
+        return precio;
+    }
 
-    
 
-
-    //Falta Metodo Calcular TotalComprobante
 
     public Date FechaIngreso(){
         Date fecha = new Date();
