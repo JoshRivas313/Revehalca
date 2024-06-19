@@ -1,7 +1,7 @@
 package Modelo;
 
 public class Cliente {
-    //Comentario Prueba
+    //Segundo Comentario
 
     private int DNICliente;
     private String nombreCliente, apellidoCliente;
